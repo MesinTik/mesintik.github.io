@@ -3,7 +3,7 @@
 	<head>
 		<!-- Initialization -->
 		<meta charset="utf-8">
-		<title>MesinTik | 401 Error </title>
+		<title>MesinTik | Redirecting... </title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<meta name="description" content="MesinTik App">
@@ -28,13 +28,8 @@
 	<body class="login-page">
 	
 		<div class="error-page">
-			<h2 class="headline text-red">401</h2>
 			<div class="error-content">
-				<h3><i class="fa fa-warning text-red"></i> Oops! Something went wrong.</h3>
-				<p>
-					Your google account is not authorized to use this application.
-					You can go somewhere else or ask someone else to build you a good application like this.
-				</p>
+				<h3><i class="fa fa-warning text-orange"></i> Redirecting...</h3>
 			</div><!-- /.error-content -->
 		</div><!-- /.error-page -->
 
@@ -44,13 +39,6 @@
 		<!-- Bootstrap JS -->
 		<script src="../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 		<!-- Addon JS -->
-		<script>
-			$(function() {
-				var source = document.referrer;
-				if (source.indexOf('mesintik.github.io') < 0) {
-					window.location.href = "../index.html";
-				}
-			});
-		</script>
+		<script src="../dist/js/redirect.js" type="text/javascript"></script>
 	</body>
 </html>

@@ -1,8 +1,11 @@
 function onSuccess(googleUser) {
-	alert('Logged in as: ' + googleUser.getBasicProfile().getName());
-}
+	var profile = googleUser.getBasicProfile();
+	var email = profile.getEmail();
+	window.location.href = "pages/redirect.html?user=" + email;
+}	
+	
 function onFailure(error) {
-	alert('error');
+	alert('Error! Try again or check your internet connection.');
 } 
 function renderButton() {
 	gapi.signin2.render('my-signin2', {
