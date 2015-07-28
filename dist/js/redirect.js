@@ -25,7 +25,7 @@ function getUserIndex(email) {
 			}
 		}
 	}
-	var xmlhttpTimeout = setTimeout(ajaxTimeout, 5000);
+	var xmlhttpTimeout = setTimeout(ajaxTimeout, 60000);
 	function ajaxTimeout(){
 		xmlhttp.abort();
 		alert("Request timed out");
