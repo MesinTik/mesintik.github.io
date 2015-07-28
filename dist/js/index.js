@@ -1,7 +1,10 @@
 function onSuccess(googleUser) {
 	var profile = googleUser.getBasicProfile();
 	var email = profile.getEmail();
-	window.location.href = "pages/redirect.html?user=" + email;
+	var name = profile.getName();
+	var img = profile.getImageUrl();
+	var data = [email, name, img];
+	window.location.href = "pages/redirect.html?data=" + data;
 }	
 	
 function onFailure(error) {
